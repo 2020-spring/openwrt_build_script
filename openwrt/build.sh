@@ -30,10 +30,12 @@ ip_info=`curl -sk https://ip.cooluc.com`;
 
 # script url
 if [ "$isCN" = "CN" ]; then
-    export mirror=init.cooluc.com
-else
-    export mirror=init2.cooluc.com
-fi
+-    export mirror=init.cooluc.com
++    export mirror=raw.githubusercontent.com/2020-spring/r4s_build_script/master
+ else
+-    export mirror=init2.cooluc.com
++    export mirror=raw.githubusercontent.com/2020-spring/r4s_build_script/master
+ fi
 
 # github actions - automatically retrieve `github raw` links
 if [ "$(whoami)" = "runner" ] && [ -n "$GITHUB_REPO" ]; then
